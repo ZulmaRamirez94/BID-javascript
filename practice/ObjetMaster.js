@@ -43,12 +43,12 @@ console.log(" Matriz con los nombres de pokemon: ", pkmnNames);
 const pkmnIDmayor99 = pokemon.filter(p => p.id > 99).map(val => val.name);
 console.log(" Nombres de Pokemon con id mayor a 99: ", pkmnIDmayor99);
 
-//una matriz con solo los nombres del pokémon cuyo único tipo es veneno    VERIFICAAAAAAAAAAARRRRR
+//una matriz con solo los nombres del pokémon cuyo único tipo es veneno   
 const pkmnTipoVeneno = pokemon.filter( p => p.types[0] === "poison" ).map(val => val.name);
 console.log(" Pokemon cuyo unico tipo es veneno: ", pkmnTipoVeneno);
 
 //una matriz que contiene solo el primer tipo de todos los Pokémon cuyo segundo tipo es "volador"
-const pkmnSegundoTipoVolador = pokemon.filter( p => p.types[1] === "flying").map(val => val.types[0] == val.name);
+const pkmnSegundoTipoVolador = pokemon.filter( p => p.types[1] === "flying").map(val => val.types[0]);
 console.log("Primer tipo de pokemon que son de segundo tipo volador ", pkmnSegundoTipoVolador);
 
 //un recuento de la cantidad de pokémon que son de tipo "normal"
