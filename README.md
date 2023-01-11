@@ -2,5 +2,5 @@
     
     Se presentan las diferentes actividades
     desarrolladas durante el modulo del Bootcamp,
-    dentro de Fundamentos/Js/Reactcomiit.
+    dentro de Fundamentos/Js/React.
 
