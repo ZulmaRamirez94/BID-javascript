@@ -11,7 +11,7 @@ class ninja {
         console.log(`El nombre del ninja es ${this.nombre}`);
     }
     showStats() {
-        console.log(`El nombre es ${this.nombre}, su fuerza es ${this.fuerza}, tiene la velocidad de ${this.velocidad} y su salud es ${this.salud} `);
+        console.log("El nombre es: " + this.nombre + " su fuerza es: " + this.fuerza +" tiene la velocidad de: " + this.velocidad + " y su salud es: " + this.salud );
     }
     drinkSake() {
         this.salud +=10;
@@ -36,7 +36,7 @@ class sensei extends ninja {
         console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
     }
 }
-const superSensei = new sensei ("Master Splinter");
+const superSensei = new sensei("Master Splinter");
 superSensei.speakWisdom();
 superSensei.showStats();
 // -> "Nombre: Master Splinter, Salud: 210, Velocidad: 10, Fuerza: 10"
