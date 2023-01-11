@@ -1,5 +1,5 @@
 //Clase Ninja
-class ninja {
+class Ninja {
     constructor(nombre, salud, velocidad, fuerza){
         this.nombre = nombre;
         this.salud = salud;
@@ -11,21 +11,17 @@ class ninja {
         console.log(`El nombre del ninja es ${this.nombre}`);
     }
     showStats() {
-        console.log("El nombre es: " + this.nombre + " su fuerza es: " + this.fuerza +" tiene la velocidad de: " + this.velocidad + " y su salud es: " + this.salud );
+        console.log("El nombre es: " + this.nombre + ", su fuerza es: " + this.fuerza +", tiene la velocidad de: " + this.velocidad + " y su salud es: " + this.salud );
     }
     drinkSake() {
         this.salud +=10;
     }
 }   
-const ninja1 = new ninja("Hyabusa", 10);
-ninja1.sayName();
-ninja1.showStats();
-ninja1.drinkSake();
 
 //Clase Sensei que hereda de ninja
-class sensei extends ninja {
-    constructor(sabiduria){
-        super("nombre", "salud", "velocidad", "fuerza", sabiduria);
+class Sensei extends Ninja {
+    constructor(nombre, salud, velocidad, fuerza, sabiduria){
+        super(nombre, salud, velocidad, fuerza, sabiduria);
         this.sabiduria = 10;
         this.salud = 200;
         this.velocidad = 10;
@@ -36,7 +32,8 @@ class sensei extends ninja {
         console.log("Lo que un programador puede hacer en un mes, dos programadores pueden hacerlo en dos meses.");
     }
 }
-const superSensei = new sensei("Master Splinter");
+const superSensei = new Sensei("Master Splinter");
+console.log(superSensei);
 superSensei.speakWisdom();
 superSensei.showStats();
 // -> "Nombre: Master Splinter, Salud: 210, Velocidad: 10, Fuerza: 10"
